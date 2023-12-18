@@ -1,0 +1,114 @@
+/* Use multiple font styles if browser has no access to one */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style for main heading */
+h1 {
+    color: #006400; /* Dark green color */
+}
+
+/* Container styles for scatter plot and map */
+.scatter-plot-container,
+.map-container {
+    margin-top: 20px;
+}
+
+/* Style for country information */
+#country-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2; 
+    border: 1px solid #ddd; 
+}
+
+/* Styles for the map legend */
+.info.legend {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.info.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+/* Styles for the dropdown */
+.dropdown-container {
+    margin-bottom: 20px;
+/* Use multiple font styles if browser has no access to one*/
+body {
+    font-family: Arial, sans-serif;
+}
+/* Container styles for scatter plot and map */
+.scatter-plot-container,
+.map-container {
+    margin-top: 20px;
+}
+
+/* Use multiple font styles if browser has no access to one*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.scatter-plot-container,
+.map-container {
+    margin-top: 20px;
+}
+
+/* Style for country information */
+#country-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f2f2f2; 
+    border: 1px solid #ddd; /
+}
+
+/* Styles for the map legend */
+.info.legend {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.info.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+/* Styles for the dropdown */
+.dropdown-container {
+    margin-bottom: 20px;
+}
+
+.dropdown-container label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.dropdown-container select {
+    font-size: 1.2em;
+    color: #0fbcae;
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ac8f8f;
+    border-radius: 4px;
+
+
+

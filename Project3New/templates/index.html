@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <!-- Include the Leaflet CSS library for mapping -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="static/styles.css">
+
+    <!-- Include the Chart.js library for chart visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Main heading -->
+    <h1>Exploring Global Intelligence Metrics</h1>
+
+    <!-- Introduction paragraph -->
+    <p>
+        This web application serves as a comprehensive resource for accessing a range of important country-specific information. It is designed to provide  useful data about various countries, including:
+
+        <!-- List of data categories -->
+        <ul>
+            <li><strong>Average IQ:</strong> Understand the average intelligence levels.</li>
+            <li><strong>Literacy Percentage:</strong> Explore literacy rates across different nations.</li>
+            <li><strong>Nobel Prize Winners:</strong> Discover the cumulative count of Nobel Prize associated with each country.</li>
+            <li><strong>Average School Education:</strong> Average duration of schooling.</li>
+            <li><strong>Human Development Index (HDI):</strong> Assess the overall development and standard of living.</li>
+            <li><strong>Population:</strong> Updated population of countries.</li>
+        </ul>
+
+        <!-- Description of dropdown and map interaction -->
+        When a country is selected from the dropdown menu, the application displays the above mentioned details, offering an in-depth look at each country's characteristics. Additionally, by interacting with the map, users can visually identify the IQ levels of different regions. This feature effectively illustrates geographical variations, highlighting areas with generally high, medium, or lower IQ scores.
+        <br><br>
+        
+        <!-- Further description of scatter plots -->
+        Furthermore, the application provides  scatter plot visualizations that depict the correlation between IQ and literacy (Very low positive correlation), as well as the relationship between education levels and the number of Nobel Prize winners (No identified correlation). These correlations offer a unique perspective on how different educational and intellectual metrics interact globally.
+    </p>
+
+    <!-- Dropdown container for country selection -->
+    <div class="dropdown-container">
+        <label for="country-dropdown">Select a Country:</label>
+        <select id="country-dropdown">
+            <option value="">Select a country</option>
+            <!-- Populate dropdown options with country names -->
+            {% for country in countries %}
+            <option value="{{ country }}">{{ country }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <!-- Container for displaying country information -->
+    <div id="country-info"></div>
+
+    <!-- Container for displaying the map -->
+    <div id="mapid" style="height: 400px;"></div>
+
+    <!-- Container for IQ-Literacy scatter plot -->
+    <div id="iq-literacy-chart-container">
+        <canvas id="iq-literacy-chart"></canvas>
+    </div>
+
+    <!-- Container for Education-Nobel scatter plot -->
+    <div id="education-nobel-chart-container">
+        <canvas id="education-nobel-chart"></canvas>
+    </div>
+
+    
+
+    <!-- JavaScript variable to hold country data -->
+    <script type="text/javascript">
+        var countryData = {{ country_data | tojson }};
+    </script>
+
+    <!-- Include the Leaflet JavaScript library for mapping -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- Include the custom JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
